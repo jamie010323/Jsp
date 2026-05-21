@@ -35,7 +35,7 @@
 				<td colspan="2" align="right">
 					<input type="submit" value="등록하기">
 				</td>
-			</tr>
+			</tr>			
 		</table>
 	  </form>
 	</body>

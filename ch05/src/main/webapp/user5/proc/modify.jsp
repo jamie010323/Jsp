@@ -4,11 +4,9 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
 	// 전송데이터 수신
-	String userid = request.getParameter("userid");
 	String name = request.getParameter("name");
 	String gender= request.getParameter("gender");
 	String age= request.getParameter("age");
-	String hp= request.getParameter("hp");
 	String addr= request.getParameter("addr");
 	
 	//---------------------------------
@@ -28,20 +26,16 @@
 	
 	// 3) SQL 실행 객체 생성
 	String sql = "UPDATE `user4` SET "; 
-	sql += "`name`=?, ";
 	sql += "`gender`=?, ";
-	sql += "``=?, age";
-	sql += "`hp`=?, ";
+	sql += "`age`=?, ";
 	sql += "`addr`=? ";
-	sql += "WHERE `userid`=?";
+	sql += "WHERE `name`=?";
 	
 	PreparedStatement psmt = conn.prepareStatement(sql);
 	psmt.setString(1, name);   
 	psmt.setString(2, gender);  
 	psmt.setString(3, age);  
-	psmt.setString(4, hp);  
-	psmt.setString(5, addr);   
-	psmt.setString(6, userid);
+	psmt.setString(4, addr);   
 	
 	// 4) SQL 실행
 	psmt.executeUpdate();
@@ -55,6 +49,6 @@
 	}
 	
 	// 목록 이동
-	response.sendRedirect("/ch05/user4/list.jsp?modify=success");
+	response.sendRedirect("/ch05/user5/list.jsp?modify=success");
 
 %>

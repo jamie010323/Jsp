@@ -22,7 +22,7 @@
 	Connection conn = DriverManager.getConnection(host, user, pass);
 	
 	// 3) SQL 실행 객체 생성
-	String sql = "DELETE FROM `User3` WHERE userid=?";
+	String sql = "DELETE FROM `User4` WHERE userid=?";
 	
 	PreparedStatement psmt = conn.prepareStatement(sql);
 	psmt.setString(1, userid);
@@ -40,6 +40,6 @@
 	}
 	
 	// 목록 이동
-	response.sendRedirect("/ch05/user3/list.jsp?delete=success");
+	response.sendRedirect("/ch05/user4/list.jsp?delete=success");
 
 %>
