@@ -29,15 +29,15 @@
     -->
     <!-- 커넥션풀 설정 -->
 	<Resource
-		name=""
-		auth=""
-		type=""
-		driverClassName=""
-		url=""
-		username=""
-		password=""
-		maxTotal=""
-		maxIdle=""
-		maxWaitMillis=""
+		name="jdbc/studydb"
+		auth="Container"
+		type="javax.sql.DataSource"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:3306/studydb"
+		username="jamie010323"
+		password="1234"
+		maxTotal="13"
+		maxIdle="13"
+		maxWaitMillis="3000"
 	/>    
 </Context>

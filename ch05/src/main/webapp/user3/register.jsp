@@ -29,7 +29,7 @@
 		</tr>
 		<tr>
 			<td>휴대폰</td>
-			<td><input type="text" name="hp"></td>
+			<td><input type="number" name="hp"></td>
 		</tr>
 		<tr>
 			<td>주소</td>
@@ -39,8 +39,8 @@
 			<td colspan="2" align="right">
 				<input type="submit" value="등록하기">
 			</td>
-		</tr>
+		  </tr>
 		</table>
-		</form>
+	  </form>
 	</body>
 </html>

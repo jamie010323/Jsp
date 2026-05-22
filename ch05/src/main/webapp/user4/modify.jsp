@@ -26,7 +26,7 @@
 				Connection conn = DriverManager.getConnection(host, user, pass);
 				
 				// 3) SQL 실행 객체 생성
-				String sql = "SELECT * FROM `Use4` WHERE `userid` = ?";
+				String sql = "SELECT * FROM `User4` WHERE `userid` = ?";
 				PreparedStatement psmt = conn.prepareStatement(sql);
 				psmt.setString(1, userid);
 
@@ -41,7 +41,7 @@
 					user4.setGender(rs.getString(3));
 					user4.setAge(rs.getString(4));
 					user4.setHp(rs.getString(5));
-					user4.setAddr(rs.getString(5));
+					user4.setAddr(rs.getString(6));
 				}
 
 				// 6) 데이터베이스 종료
@@ -88,7 +88,7 @@
 		</tr>
 		<tr>
 			<td>휴대폰</td>
-			<td><input type="text" name="hp" value="<%= user4.getHp() %>"></td>
+			<td><input type="number" name="hp" value="<%= user4.getHp() %>"></td>
 	
 		</tr>
 		<tr>

@@ -30,7 +30,7 @@
 	String sql = "UPDATE `user4` SET "; 
 	sql += "`name`=?, ";
 	sql += "`gender`=?, ";
-	sql += "``=?, age";
+	sql += "`age`=?, ";
 	sql += "`hp`=?, ";
 	sql += "`addr`=? ";
 	sql += "WHERE `userid`=?";

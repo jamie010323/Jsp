@@ -4,7 +4,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
 	// 전송데이터 수신
-	String name = request.getParameter("name");
+	String name= request.getParameter("name");
 	String gender= request.getParameter("gender");
 	String age= request.getParameter("age");
 	String addr= request.getParameter("addr");
@@ -27,10 +27,10 @@
 	// 3) SQL 실행 객체 생성
 	String sql = "INSERT INTO `User5` VALUES (?,?,?,?)";
 	PreparedStatement psmt = conn.prepareStatement(sql);
-	psmt.setString(2, name);
-	psmt.setString(3, gender);
-	psmt.setString(4, age);
-	psmt.setString(6, addr);
+	psmt.setString(1, name);
+	psmt.setString(2, gender);
+	psmt.setString(3, age);
+	psmt.setString(4, addr);
 	
 	// 4) SQL 실행
 	psmt.executeUpdate();

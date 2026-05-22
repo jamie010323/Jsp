@@ -3,15 +3,20 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>user5::목록</title>
+		<title>user4::목록</title>
 	</head>
 	<body>
-		<h3>User5 목록</h3>
+		<h3>User4 목록</h3>
 		<a href="/ch05/1_jdbc.jsp">메인</a>
-		<a href="/ch05/user5/list.jsp">등록</a>
+		<a href="/ch05/user4/list.jsp">등록</a>
 	
-	<form action="/ch05/user5/proc/register.jsp" method="post">
+	<form action="/ch05/user4/proc/register.jsp" method="post">
 		<table border="1">
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="userid"></td>
+	
+		</tr>
 			<tr>
 				<td>이름</td>
 				<td><input type="text" name="name" placeholder="이름 입력"></td>
@@ -27,6 +32,10 @@
 				<td>나이</td>
 				<td><input type="number" name="age" placeholder="나이 입력"></td>
 			</tr>
+			<tr>
+			<td>휴대폰</td>
+			<td><input type="number" name="hp"></td>
+		</tr>
 			<tr>
 				<td>주소</td>
 				<td><input type="text" name="addr" placeholder="주소 입력"></td>
